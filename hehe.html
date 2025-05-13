@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nama Server Minecraft</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 px-4">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Nama Server Minecraft</h1>
+    <p class="text-lg md:text-xl text-gray-300 mb-6">Server Minecraft Indonesia dengan fitur unik, ramah, dan seru!</p>
+    <div class="flex justify-center items-center space-x-4">
+      <input id="server-ip" value="play.namaserver.my.id" readonly class="bg-gray-800 text-white px-4 py-2 rounded-lg w-64 text-center"/>
+      <button onclick="copyIP()" class="bg-indigo-600 hover:bg-indigo-700 transition px-4 py-2 rounded-lg">Copy IP</button>
+    </div>
+  </section>
+
+  <!-- Banner Image -->
+  <section class="flex justify-center">
+    <img src="https://yourbannerurl.com/banner.png" alt="Server Banner" class="w-full md:w-3/4 rounded-xl shadow-lg">
+  </section>
+
+  <!-- Features -->
+  <section class="py-16 px-6 md:px-20">
+    <h2 class="text-3xl font-bold text-center mb-10">Fitur Server</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">Survival + Economy</h3>
+        <p class="text-gray-300">Gabungan survival klasik dengan sistem ekonomi yang seru.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">Minigames</h3>
+        <p class="text-gray-300">Mainkan berbagai minigame seperti Bedwars, Skywars, dan lainnya.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">Komunitas Aktif</h3>
+        <p class="text-gray-300">Join Discord dan rasakan komunitas yang aktif dan bersahabat.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discord Section -->
+  <section class="bg-indigo-600 py-12 text-center px-4">
+    <h2 class="text-2xl font-bold mb-4">Gabung Discord Kami</h2>
+    <p class="mb-6">Dapatkan info update, event, dan ngobrol bareng komunitas.</p>
+    <a href="https://discord.gg/yourserver" target="_blank" class="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Join Discord</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-500 text-sm">
+    &copy; 2025 Nama Server Minecraft. All rights reserved.
+  </footer>
+
+  <script>
+    function copyIP() {
+      const ipField = document.getElementById('server-ip');
+      ipField.select();
+      ipField.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("IP berhasil disalin: " + ipField.value);
+    }
+  </script>
+
+</body>
+</html>
